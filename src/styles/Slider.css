@@ -1,0 +1,77 @@
+.movie-slider {
+    background-color: black;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.slider-title {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* For smooth scrolling on iOS */
+}
+
+.movie-card {
+    display: inline-block;
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    /* Ensure hovered card appears on top */
+}
+
+.movie-card:hover .movie-poster {
+    border-radius: 16px;
+
+}
+
+.movie-poster {
+    width: 300px;
+    height: 400px;
+    border-radius: 8px;
+    /* Initial border radius */
+    transition: border-radius 0.2s;
+    /* Add transition for border radius */
+}
+
+.movie-title {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.movie-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.movie-title a:hover {
+    text-decoration: underline;
+}
+
+/* Hide scrollbar */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}

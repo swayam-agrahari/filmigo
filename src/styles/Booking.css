@@ -1,0 +1,129 @@
+/* Booking.css */
+
+
+.booking-container {
+  background-image: url('./../../public/booking_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+  color: beige;
+
+}
+
+
+.seat {
+  background-color: rgb(192, 181, 164);
+
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat:hover {
+  background-color: rgb(172, 161, 144);
+}
+
+.row {
+  display: flex;
+}
+
+.seat.selected {
+  background-color: rgb(57, 183, 114);
+}
+
+.seat.occupied {
+  background-color: rgb(210, 51, 51);
+  pointer-events: none;
+}
+
+.seat:nth-of-type(4),
+.seat:nth-of-type(8) {
+  margin-right: 40px;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.status li {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.status div {
+  margin-right: 10px;
+}
+
+.screen {
+  background-color: rgba(255, 255, 255, 0.9);
+
+  height: 70px;
+  width: 50%;
+  margin: 15px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.75);
+  transform: rotateX(-45deg);
+  border-radius: 10px;
+}
+
+.container {
+  perspective: 1000px;
+
+}
+
+.price {
+  display: flex;
+  gap: 32px;
+}
+
+.total {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.total span {
+  color: rgb(57, 183, 114);
+}
+
+.pay-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: larger;
+  background-color: rgb(57, 183, 114);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.pay-btn:hover {
+  background-color: rgb(47, 163, 104);
+  transform: scale(1.05);
+}
